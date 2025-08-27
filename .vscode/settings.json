@@ -6,5 +6,6 @@
   "editor.autoClosingBrackets": "always",
   "editor.autoClosingComments": "always",
   "editor.wordWrap": "on",
-  "editor.minimap.enabled": false
+  "editor.minimap.enabled": false,
+  "reactSnippets.settings.prettierEnabled": true
 }
