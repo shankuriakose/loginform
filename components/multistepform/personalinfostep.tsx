@@ -1,60 +1,29 @@
 import { User } from "lucide-react";
+import MultiStepHeader from "./formparts/header";
+import InputNameField from "./formparts/inputnamefield";
 
 export default function PersonalInfoStep() {
   return (
     <div className="space-y-8">
       {/* Header */}
-      <div className="text-center mb-10">
-        <div className="inline-flex items-center justify-center w-14 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-2xl mb-4 shadow-lg">
-          <User className="w-7 h-7 text-white" />
-        </div>
-        <h2 className="text-3xl font-black text-gray-900 mb-3">
-          Personal Information
-        </h2>
-        <p className=" text-gray-600 text-lg">
-          Tell us a bit about yourself to get started
-        </p>
-      </div>
+      <MultiStepHeader
+        title="Personal Information"
+        description="Tell us a bit about yourself to get started"
+      />
       {/* Input Fields */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         {/* First Name */}
-        <div className="space-y-2">
-          <label
-            htmlFor=""
-            className="text-sm block font-semibold text-gray-700"
-          >
-            First Name
-          </label>
-          <div className="relative">
-            <input
-              type="text"
-              className={`w-full px-4 py-4 border-2 rounded-xl focus:ring-blue-500/20 focus:border-blue-500 transition-all duration-200 bg-white/50 backdrop-blur-sm `}
-              placeholder="Enter your first name"
-            />
-            <div className="absolute -bottom-6 left-0 flex items-center text-red-500 text-sm">
-              Please enter your first name
-            </div>
-          </div>
-        </div>
+        <InputNameField
+          name="First name"
+          placeholder="Enter your first name"
+          warninng="Please enter your first name"
+        />
         {/* Last Name */}
-        <div className="space-y-2">
-          <label
-            htmlFor=""
-            className="text-sm block font-semibold text-gray-700"
-          >
-            Last Name
-          </label>
-          <div className="relative">
-            <input
-              type="text"
-              className={`w-full px-4 py-4 border-2 rounded-xl focus:ring-blue-500/20 focus:border-blue-500 transition-all duration-200 bg-white/50 backdrop-blur-sm `}
-              placeholder="Enter your Last name"
-            />
-            <div className="absolute -bottom-6 left-0 flex items-center text-red-500 text-sm">
-              Please enter your Last name
-            </div>
-          </div>
-        </div>
+        <InputNameField
+          name="Last name"
+          placeholder="Enter your last name"
+          warninng="Please enter your last name"
+        />
       </div>
       {/* Second row */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">

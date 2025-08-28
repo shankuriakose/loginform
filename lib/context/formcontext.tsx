@@ -23,7 +23,7 @@ export const useFormContext = () => {
 };
 
 export const FormProvider = ({ children }: { children: React.ReactNode }) => {
-  const [currentStep, setCurrentStep] = useState(1);
+  const [currentStep, setCurrentStep] = useState(4);
   const steps: Step[] = [
     { id: 1, title: "Personal Info", description: "Basic information" },
     { id: 2, title: "Contact Detail", description: "How to reach you" },
